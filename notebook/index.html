@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<body>
+
+
+<h1> Hello Observable Cell </h1>
+
+<p>This is before the cell</p>
+
+<div id="vis"></div>
+
+<p>This is after the cell</p>
+
+<script type="module">
+
+// Load the Observable runtime and inspector.
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+
+// Your notebook, compiled as an ES module.
+import notebook from "https://api.observablehq.com/@amitkaps/embedding-options@16.js?v=3";
+
+
+new Runtime().module(notebook, Inspector.into(document.querySelector("#vis")));
+
+</script>
+
+</body>
+
+
